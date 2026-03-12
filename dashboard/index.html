@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<div class="logo">
+Admin Dashboard
+</div>
+
+<div class="search-box">
+<input type="text" placeholder="Search">
+<button><i class="fa fa-search"></i></button>
+</div>
+
+<div class="top-icons">
+<i class="fa-solid fa-bell"></i>
+<i class="fa-solid fa-user"></i>
+</div>
+
+</header>
+
+
+<div class="container">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<ul>
+
+<li class="active">
+<i class="fa fa-th-large"></i> Dashboard
+</li>
+
+<li>
+<i class="fa fa-newspaper"></i> Articles
+</li>
+
+<li>
+<i class="fa fa-chart-bar"></i> Report
+</li>
+
+<li>
+<i class="fa fa-building"></i> Institution
+</li>
+
+<li>
+<i class="fa fa-user"></i> Profile
+</li>
+
+<li>
+<i class="fa fa-cog"></i> Settings
+</li>
+
+<li>
+<i class="fa fa-sign-out-alt"></i> Logout
+</li>
+
+</ul>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+<div class="cards">
+
+<div class="card">
+<h2 id="views"></h2>
+<p>Article Views</p>
+</div>
+
+<div class="card">
+<h2 id="likes"></h2>
+<p>Likes</p>
+</div>
+
+<div class="card">
+<h2 id="comments"></h2>
+<p>Comments</p>
+</div>
+
+<div class="card">
+<h2 id="published"></h2>
+<p>Published</p>
+</div>
+
+</div>
+
+
+<div class="table-container">
+
+<div class="table-header">
+
+<h2>Recent Articles</h2>
+<button class="view-btn">View All</button>
+
+</div>
+
+
+<!-- FILTERS -->
+
+<div class="filters">
+
+<input type="text" id="searchInput" placeholder="Search article">
+
+<select id="statusFilter">
+<option value="all">All Status</option>
+<option value="Published">Published</option>
+</select>
+
+</div>
+
+
+<table>
+
+<tr>
+
+<th>
+Article
+<button onclick="sortTable(0,'asc')">↑</button>
+<button onclick="sortTable(0,'desc')">↓</button>
+</th>
+
+<th>
+Views
+<button onclick="sortTable(1,'asc')">↑</button>
+<button onclick="sortTable(1,'desc')">↓</button>
+</th>
+
+<th>
+Comments
+<button onclick="sortTable(2,'asc')">↑</button>
+<button onclick="sortTable(2,'desc')">↓</button>
+</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+<td>Article 73</td>
+<td>2.9</td>
+<td>210</td>
+<td>Published</td>
+</tr>
+
+<tr>
+<td>Article 72</td>
+<td>1.5</td>
+<td>360</td>
+<td>Published</td>
+</tr>
+
+<tr>
+<td>Article 71</td>
+<td>1.1</td>
+<td>150</td>
+<td>Published</td>
+</tr>
+
+<tr>
+<td>Article 70</td>
+<td>1.2</td>
+<td>420</td>
+<td>Published</td>
+</tr>
+
+</table>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

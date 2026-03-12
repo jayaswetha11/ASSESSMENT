@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <header class="top-nav">
+            <h1>Create New Account</h1>
+            <a href="#" class="contact-link">Contact Us</a>
+        </header>
+
+        <div class="card">
+            <div class="stepper">
+                <div class="step active" id="step1-tab">
+                    <span class="circle">1</span> Your Profile
+                </div>
+                <div class="step" id="step2-tab">
+                    <span class="circle">2</span> Business Information
+                </div>
+                <div class="step" id="step3-tab">
+                    <span class="circle">3</span> Additional Users
+                </div>
+            </div>
+
+            <div class="form-body">
+                <p class="step-label">Step 1</p>
+                <h2 class="form-title">Your Profile</h2>
+                <p class="form-subtitle">Enter the login information for your account. You will be able to create additional users after registering.</p>
+
+                <form id="registrationForm">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label>First Name<span class="req">*</span></label>
+                            <input type="text" placeholder="Input Your First Name" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Last Name<span class="req">*</span></label>
+                            <input type="text" placeholder="Input Your Last Name" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email<span class="req">*</span></label>
+                            <input type="email" placeholder="Input Your Email" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Phone Number<span class="req">*</span></label>
+                            <input type="tel" placeholder="Input Your Phone Number" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password<span class="req">*</span></label>
+                            <input type="password" placeholder="Create Password" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Confirm Password<span class="req">*</span></label>
+                            <input type="password" placeholder="Confirm Your Password" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer class="footer-actions">
+            <a href="#" class="back-link">&lt; Back to Login</a>
+            <button type="button" class="next-btn" id="nextBtn">Next Step &gt;</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

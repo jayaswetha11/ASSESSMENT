@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-wrapper {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Header - Logo removed */
+.top-nav {
+    display: flex;
+    justify-content: center; /* Centers the title */
+    position: relative;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.top-nav h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.contact-link {
+    position: absolute;
+    right: 0;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Stepper Tabs */
+.stepper {
+    display: flex;
+    background: #f1f5f9;
+}
+
+.step {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    color: #94a3b8;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.step.active {
+    background: #8ab4f8; /* Matches the zoomed-in image blue */
+    color: white;
+    border-top-left-radius: 25px; /* Matches card corner */
+    border-bottom-right-radius: 35px; /* The specific "tab" curve */
+}
+
+.circle {
+    width: 26px;
+    height: 26px;
+    background: white;
+    color: #8ab4f8;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Form Styling */
+.form-body {
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.step-label {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.form-title {
+    font-size: 32px;
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+.form-subtitle {
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom: 45px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.req { color: #8ab4f8; }
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+}
+
+input:focus { border-color: #8ab4f8; }
+
+/* Buttons */
+.footer-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.back-link { color: white; text-decoration: none; font-size: 14px; }
+
+.next-btn {
+    background: #818cf8;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+}
