@@ -3,72 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>Account Registration</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="page-wrapper">
+        <main class="container">
+            <h1 id="pageTitle">Create New Account</h1>
 
-    <div class="main-wrapper">
-        <header class="top-nav">
-            <h1>Create New Account</h1>
-            <a href="#" class="contact-link">Contact Us</a>
-        </header>
+            <div class="form-card" id="mainCard">
+                <div class="stepper">
+                    <div class="step active"><span class="step-num">1</span> Your Profile</div>
+                    <div class="step"><span class="step-num">2</span> Business Info</div>
+                    <div class="step"><span class="step-num">3</span> Finalize</div>
+                </div>
 
-        <div class="card">
-            <div class="stepper">
-                <div class="step active" id="step1-tab">
-                    <span class="circle">1</span> Your Profile
+                <div class="form-body" id="formContainer">
+                    <p class="step-indicator">Step 1</p>
+                    <h2>Your Profile</h2>
+                    <p class="subtitle">Please fill in your details accurately to create your account.</p>
+
+                    <form id="registrationForm" novalidate>
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <label>First Name*</label>
+                                <input type="text" id="firstName" placeholder="e.g. John" autocomplete="off">
+                                <span class="error-msg" id="firstNameError"></span>
+                            </div>
+                            <div class="input-group">
+                                <label>Last Name*</label>
+                                <input type="text" id="lastName" placeholder="e.g. Doe" autocomplete="off">
+                                <span class="error-msg" id="lastNameError"></span>
+                            </div>
+                            <div class="input-group">
+                                <label>Email Address*</label>
+                                <input type="email" id="email" placeholder="email@example.com">
+                                <span class="error-msg" id="emailError"></span>
+                            </div>
+                            <div class="input-group">
+                                <label>Phone Number*</label>
+                                <input type="text" id="phone" placeholder="Numbers only">
+                                <span class="error-msg" id="phoneError"></span>
+                            </div>
+                            <div class="input-group">
+                                <label>Password* (min 6 chars)</label>
+                                <input type="password" id="password" placeholder="••••••••">
+                                <span class="error-msg" id="passwordError"></span>
+                            </div>
+                            <div class="input-group">
+                                <label>Confirm Password*</label>
+                                <input type="password" id="confirmPassword" placeholder="••••••••">
+                                <span class="error-msg" id="confirmPasswordError"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <a href="#" class="back-link">&lt; Back to Login</a>
+                            <button type="submit" class="submit-btn">Submit Registration</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="step" id="step2-tab">
-                    <span class="circle">2</span> Business Information
-                </div>
-                <div class="step" id="step3-tab">
-                    <span class="circle">3</span> Additional Users
+
+                <div class="success-state" id="successState" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h2>Submission Successful!</h2>
+                    <p>Your account details have been recorded. Check the console for the data payload.</p>
+                    <button class="submit-btn" onclick="location.reload()">Create Another Account</button>
                 </div>
             </div>
-
-            <div class="form-body">
-                <p class="step-label">Step 1</p>
-                <h2 class="form-title">Your Profile</h2>
-                <p class="form-subtitle">Enter the login information for your account. You will be able to create additional users after registering.</p>
-
-                <form id="registrationForm">
-                    <div class="form-grid">
-                        <div class="input-group">
-                            <label>First Name<span class="req">*</span></label>
-                            <input type="text" placeholder="Input Your First Name" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Last Name<span class="req">*</span></label>
-                            <input type="text" placeholder="Input Your Last Name" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Email<span class="req">*</span></label>
-                            <input type="email" placeholder="Input Your Email" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Phone Number<span class="req">*</span></label>
-                            <input type="tel" placeholder="Input Your Phone Number" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Password<span class="req">*</span></label>
-                            <input type="password" placeholder="Create Password" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Confirm Password<span class="req">*</span></label>
-                            <input type="password" placeholder="Confirm Your Password" required>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <footer class="footer-actions">
-            <a href="#" class="back-link">&lt; Back to Login</a>
-            <button type="button" class="next-btn" id="nextBtn">Next Step &gt;</button>
-        </footer>
+        </main>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
